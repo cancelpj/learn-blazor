@@ -1,0 +1,30 @@
+﻿[
+    {
+        "Index": 0,
+        "Path": "",
+        "Title": "首页",
+        "TitleEN": "Home",
+        "IconClass": "oi-home"
+    },
+    {
+        "Index": 1,
+        "Path": "counter",
+        "Title": "计数器",
+        "TitleEN": "",
+        "IconClass": "oi-plus"
+    },
+    {
+        "Index": 2,
+        "Path": "fetchdata",
+        "Title": "天气报表",
+        "TitleEN": "",
+        "IconClass": "oi-list-rich"
+    },
+    {
+        "Index": 3,
+        "Path": "counter",
+        "Title": "待办事项",
+        "TitleEN": "Todo List",
+        "IconClass": "oi-list"
+    }
+]

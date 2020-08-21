@@ -1,0 +1,31 @@
+﻿@page "/todo"
+@using BlazorApp.Data
+
+<h3>待办事项：@todos.Count(t => !t.IsDone)</h3>
+
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>
+            <input @bind="@todo.Title" />
+            <input type="checkbox" @bind="todo.IsDone" />
+        </li>
+    }
+</ul>
+
+<input placeholder="待办事项" @bind="newTodo" />
+<button @onclick="AddTodo">新增</button>
+
+@code {
+    private IList<TodoItem> todos = new List<TodoItem>();
+    private string newTodo;
+
+    private void AddTodo()
+    {
+        if (!string.IsNullOrEmpty(newTodo))
+        {
+            todos.Add(new TodoItem { Title = newTodo, IsDone = false });
+            newTodo = string.Empty;
+        }
+    }
+}
